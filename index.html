@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>SlideShow</title>
+</head>
+<style>
+    body {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide-show {
+        width: 500px;
+        overflow: hidden;
+        position: relative;
+    }
+    .list-images {
+        display: flex;
+       transition: 0.5s;
+    }
+    .btn:hover {
+        color: white;
+    }
+    .btn {
+        font-size: 45px;
+        color: #999;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .btn-left {
+        left: 0;
+    }
+    .btn-right {
+        right: 0;
+    }
+    .index-images {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .index-item {
+        border: 2px solid #999;
+        padding: 10px;
+        margin: 3px;
+        border-radius: 50%;
+    }
+    .active {
+        background-color: #999;
+    }
+</style>
+<body>
+    <div class="slide-show">
+        <div class="list-images">
+            <img src="https://images3.alphacoders.com/106/1069102.jpg" width="100%" alt="">
+            <img src="https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg" width="100%" alt="">
+            <img src="https://i.pinimg.com/originals/71/9e/80/719e80760999b4c355a723224120eb07.png" width="100%" alt="">
+            <img src="https://images5.alphacoders.com/112/thumb-1920-1123013.jpg" width="100%" alt="">
+        </div>
+        <div class="btns">
+            <div class="btn-left btn"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right btn"><i class='bx bx-chevron-right'></i></div>
+        </div>
+        <div class="index-images">
+            <div class="index-item index-item-0 active"></div>
+            <div class="index-item index-item-1"></div>
+            <div class="index-item index-item-2"></div>
+            <div class="index-item index-item-3"></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
